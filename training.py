@@ -21,7 +21,10 @@ def train_network(X_train, y_train, X_valid, y_valid, net_width, max_iters, lr, 
     print(n_classes)
     if seed is not None:
         torch.manual_seed(seed)
-    model = models.ConvNet(n_channels, n_classes, net_width = net_width, net_norm = net_norm, im_size = (im_size, im_size)).cuda()
+        
+    device = torch.device('cuda') if torch.cuda.is_available() else torch.device('cpu')
+    model = models.ConvNet(n_channels, n_classes, net_width = net_width, net_norm = net_norm, im_size = (im_size, im_size))
+    model = torch.nn.DataParallel(model, device_ids = [0,1]).to(device)
     model_init = copy.deepcopy(model)
     
     optim = torch.optim.SGD(list(model.parameters()), lr = lr, momentum = 0.9, weight_decay = 0)
