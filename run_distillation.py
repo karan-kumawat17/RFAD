@@ -140,7 +140,7 @@ if __name__ == '__main__':
     model_class = partial(models.ConvNet_wide, n_channels, net_norm = 'none', im_size=(im_size,im_size), k = 2, chopped_head = True)
     scheduler = [(0, args.n_models, 1)]
     
-    n_iters = 100000 if not args.coreset else 1
+    n_iters = 10000 if not args.coreset else 1
     
     distillation.distill_dataset(X_train, y_train,
                                        model_class, args.lr, 8, args.n_batches, iters = n_iters,
