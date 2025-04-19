@@ -41,14 +41,9 @@ To automatically load the set of training hyperparameters used for finite traini
 
 utils.py contains the best hyperparameters for finite network training
 
-To use the empirical NNGP for inference on fashion-mnist:
-```python3 run_network_parameter_analysis.py --dataset fashion --save_path path/to/directory```
-
-To use the empirical NNGP for inference on fashion-mnist:
-```python3 run_network_parameter_analysis.py --dataset fashion --save_path path/to/directory```
-
 To run corruption experiments on CelebA with corruption 0.8:
 ```python3 run_distillation.py --dataset celeba --save_path path/to/directory/ --samples_per_class 1 --platt --n_batches 1 --init_strategy noise --corruption 0.8```
+
 To run CelebA experiments, make sure you are on the latest version of PyTorch, as older version have a bug where the test/train splis are incorrect.
 
 To evaluate with NNGP KRR on CelebA:
