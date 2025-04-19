@@ -1,0 +1,4 @@
+Running finite results
+
+Centering: True, loss_mode: mse, lr: 0.1, weight_decay: 0, label_scale: 8, valid_acc: 0.3576, test_acc: 0.3067
+

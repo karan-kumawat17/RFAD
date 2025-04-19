@@ -1,0 +1,6 @@
+
+Running KRR results
+KRR results on valid set: NNGP: 0.5291, NTK: 0.5116
+
+KRR results on test set: NNGP: 0.4169, NTK: 0.4112
+
