@@ -9,9 +9,9 @@ Dataset distillation compresses large datasets into smaller synthetic coresets w
 Today's best-performing algorithm, *Kernel Inducing Points* (KIP), which makes use of the correspondence between infinite-width neural networks and kernel-ridge regression, is prohibitively slow due to the exact computation of the neural tangent kernel matrix, scaling O(|S|2), with |S| being the coreset size. To improve this, we propose a novel algorithm that uses a random feature approximation (RFA) of the Neural Network Gaussian Process (NNGP) kernel, which reduces the kernel matrix computation to O(|S|). Our algorithm provides at least a 100-fold speedup over KIP and can run on a single GPU. Our new method, termed an RFA Distillation (RFAD), performs competitively with KIP and other dataset condensation algorithms in accuracy over a range of large-scale datasets, both in kernel regression and finite-width network training. We demonstrate the effectiveness of our approach on tasks involving model interpretability and privacy preservation.
 
 # Example usage (PS: I have ran this on CIFAR100)
-To run generate a distilled set on CIFAR100, 10 samples per class, platt loss with label learning, for example:
+To run generate a distilled set on CIFAR100, 1 sample per class, platt loss with label learning, for example:
 
-```python3 run_distillation.py --dataset cifar100 --save_path path/to/directory/ --samples_per_class 10 --platt --learn_labels ```
+```python3 run_distillation.py --dataset cifar100 --save_path path/to/directory/ --samples_per_class 1 --platt --learn_labels ```
 
 ## If you want to skip training and directly evaluate the dataset then you can go directly to evaluating the distilled set commands (I have uploaded the best distilled sets).
 
