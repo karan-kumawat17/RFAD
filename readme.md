@@ -73,4 +73,4 @@ Note that some versions of pytorch have incorrect test/train splits for CelebA
 *Impact of different preprocessing techniques on distilled images*
 
 ### Feature Space Visualization
-![t-SNE Visualization](./distilled_data/tsne_visualization.png)
+![UMAP Visualization](./distilled_data/umap_visualization.png)
