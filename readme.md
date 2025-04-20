@@ -61,3 +61,16 @@ I have additionally include some distilled dataset for cifar10 with 1,10, or 50 
 - torch_optimizer
 - sklearn, matplotlib, numpy, scipy
 Note that some versions of pytorch have incorrect test/train splits for CelebA
+
+
+## Distillation Results
+
+![Distillation Progress](./distilled_data/distillation_progress.gif)
+*Evolution of distilled images during training*
+
+### Comparison of Preprocessing Methods
+![Preprocessing Comparison](./distilled_data/preprocessing_comparison.png)
+*Impact of different preprocessing techniques on distilled images*
+
+### Feature Space Visualization
+![t-SNE Visualization](./distilled_data/tsne_visualization.png)
