@@ -74,3 +74,6 @@ Note that some versions of pytorch have incorrect test/train splits for CelebA
 
 ### Feature Space Visualization
 ![UMAP Visualization](./distilled_data/umap_visualization.png)
+
+### Comparison of Kernels
+![Kernel Comparison](./eval_distilled_data/kernel_accuracy_comparison.png)
